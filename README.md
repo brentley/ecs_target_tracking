@@ -99,7 +99,7 @@ Our service is holding at the minimum level of 3 tasks.
 # Scale Out
 After establishing that baseline, we add some load:
 ```
-while true; do ab -l -c 9 -t 60 $alb_url ; sleep 1; done
+while true; do ab -l -c 9 -t 60 $alb_url/ ; sleep 1; done
 ```
 This command is Apache Bench. We generate 9 concurrent requests (`-c 9`), as 
 rapidly as can be filled, for 60 seconds (`-t 60`), and ignore length variances (`-l`).
